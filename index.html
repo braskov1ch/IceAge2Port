@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>Ice Age 2: Arctic Slide</title>
+<style>
+  :root { color-scheme: dark; }
+  html, body { margin: 0; height: 100%; background: #0b1622; color: #9fb4c8; font: 13px/1.4 system-ui, sans-serif; }
+  body { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; overflow: hidden; touch-action: none; }
+  #wrap { position: relative; }
+  #screen { display: block; background: #000; image-rendering: pixelated; image-rendering: crisp-edges; box-shadow: 0 0 0 2px #1d3a55, 0 12px 40px #0008; }
+  #credit { opacity: .8; letter-spacing: .02em; }
+  #hint { opacity: .55; font-size: 12px; text-align: center; max-width: 92vw; }
+  #pad { display: none; width: 100%; max-width: 480px; justify-content: space-between; align-items: center; gap: 12px; padding: 0 10px; box-sizing: border-box; }
+  .grp { flex-wrap: nowrap; }
+  body.touch #pad { display: flex; }
+  body.touch #hint { display: none; }
+  .grp { display: flex; gap: 8px; }
+  .btn { user-select: none; -webkit-user-select: none; touch-action: none; min-width: 48px; height: 52px; border-radius: 12px; border: 1px solid #2c4f72; background: #12273a; color: #cfe2f5; font-size: 22px; display: flex; align-items: center; justify-content: center; }
+  .btn.on { background: #1f4a73; }
+  .btn.soft { font-size: 13px; min-width: 62px; }
+</style>
+</head>
+<body>
+  <div id="wrap"><canvas id="screen" width="240" height="320"></canvas></div>
+  <div id="pad">
+    <div class="grp"><div class="btn" data-k="-3">◀</div><div class="btn" data-k="-1">▲</div><div class="btn" data-k="-2">▼</div><div class="btn" data-k="-4">▶</div></div>
+    <div class="grp"><div class="btn soft" data-k="-6">Menu</div><div class="btn soft" data-k="-7">Back</div></div>
+  </div>
+  <div id="hint">→ бег · ← торможение · ↑ прыжок · Enter — выбор · Q — меню/пауза · Esc — назад · M — звук</div>
+  <div id="credit">[port by ev1lbr1tan] · <a id="lang" href="#" onclick="return false" style="color:inherit;text-decoration:underline;cursor:pointer"></a> · <a id="hdlink" href="#" onclick="return false" style="color:inherit;text-decoration:underline;cursor:pointer"></a></div>
+  <script src="js/rt.js"></script>
+  <script src="js/png.js"></script>
+  <script src="js/hd.js"></script>
+  <script src="js/midp.js"></script>
+  <script src="js/midi.js"></script>
+  <script src="js/game.js"></script>
+  <script src="js/assets.js"></script>
+  <script src="js/boot.js"></script>
+</body>
+</html>
